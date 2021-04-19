@@ -1,0 +1,715 @@
+/* Fix CSS quote tool */
+
+#datacenters input[type="radio"] {
+    zoom: 1;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    height: 13px;
+    width: 13px;
+}
+
+.radio {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+#pbx-holder h4 {
+    font-family: "Arial" !important;
+    margin: 0 !important;
+    line-height: 1.7em;
+}
+#pbx-holder a {
+    font-family: "Arial" !important;
+    line-height: auto !important;
+    margin: 0 !important;
+}
+#pbx-holder p {
+    margin: 0;
+}
+/** widget override*/
+.grid-8 .widget {
+    border: none;
+    margin: 0 !important;
+    padding: 15px;
+    
+}
+.grid-8 .widget-content {
+    padding: 0 !important;
+}
+
+.grid-8 .widget-header {
+    text-align: center;
+    background: none;
+    border: none;
+}
+
+.grid-8 .widget-header h3{
+    font-size: 20px;
+    margin: 0;
+}
+
+.grid-8 .widget-header img{
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.field-group .field {
+    margin-bottom: 0 !important;
+}
+
+#toggle-visibility {
+    background-image: url("../images/sprite/sprite-16-black.png");
+    background-position: 0 -3167px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    right: 85px;
+    margin-left: 0;
+    margin-right: 0;
+    top: 12px;
+    position: absolute;
+    width: 16px;
+}
+
+#pbx-holder input[type='text'] {
+    width: 25px;
+}
+
+#pbx-holder select {
+    width: 60px;
+}
+
+#pbx-holder span#configHolder {
+    color: #777777;
+    font-size: 10px;
+}
+
+#pbx-holder span#configHolder a#configDID{
+    color: #777777;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+#pbx-holder span#configHolder a#configDID:hover {
+    color: #3d3d3d;
+}
+
+#pbx-holder .inputs {
+    position: relative;
+}
+
+#pbx-holder .select label{
+    margin-left: 65px;
+}
+
+#pbx-holder .inputs select {
+    width: 60px;
+    opacity:1;
+    z-index: 1;
+    position: absolute;
+    height: 22px;
+    opacity: 0;
+}
+
+#pbx-holder .inputs #select_skin {
+    background: url("../images/uniform/sprite.png") repeat scroll 62px -2px transparent;
+    width: 60px;
+    height: 25px;
+    position: absolute;
+}
+
+#pbx-holder .inputs #select_skin:before {
+    background: url("../images/uniform/sprite.png") repeat scroll 8px -132px transparent;
+    content: "";
+    height: 25px;
+    margin-left: -6px;
+    position: absolute;
+    width: 10px;
+}
+#select_value {
+    padding-left: 5px;
+    margin-top:-1px;
+}
+#visibility {
+    position: absolute;
+    right: 0px;
+    color: green;
+    width: 80px;
+    text-align: center; 
+    display: inline-block;
+}
+
+#reg_header ul {
+    margin-bottom: 10px;
+}
+
+#reg_header li {
+    background: none repeat scroll 0 0 #333333;
+    display: inline-block;
+    font-size: 24px;
+    list-style: none outside none;
+    margin: 8px 13px;
+    padding: 10px 10px 0 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+#reg_header li:before {
+    border-bottom: 23px solid #333333;
+    border-left: 23px solid transparent;
+    border-top: 23px solid #333333;
+    content: " ";
+    height: 0;
+    margin-left: -33px;
+    margin-top: -10px;
+    position: absolute;
+    width: 0;
+}
+
+#reg_header li:after {
+    border-bottom: 23px solid transparent;
+    border-left: 23px solid #333333;
+    border-top: 23px solid transparent;
+    content: " ";
+    height: 0;
+    margin-right: -33px;
+    margin-top: -36px;
+    float:right;
+    width: 0;
+}
+
+#reg_header li.selected {
+    background: none repeat scroll 0 0 #4993D7;
+}
+
+#reg_header li.selected:before {
+    border-bottom: 23px solid #4993D7;
+    border-top: 23px solid #4993D7;
+}
+
+#reg_header li.selected:after {
+    border-left: 23px solid #4993D7;
+}
+
+#reg_header li h1 {
+    margin:0;
+    font-weight: normal;
+} 
+#reg_header li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#product-holder, #devices-holder, #pbx-holder {
+    display: block;
+}
+
+#pbx-holder {
+    width: 100%;
+}
+
+#product-holder {
+    margin-right: 10px;
+    width: 100%;
+    display: none;
+}
+
+#devices-holder {
+    width: 100%;
+    display: none;
+}
+
+#product-holder h4 {
+    margin-bottom: 0 !important;
+}
+
+#product-holder input, #devices-holder input {
+    width: 50px;
+    text-align: center;
+}
+
+.slider{
+    width: 300px;
+}
+hr {
+    margin:0;
+}
+
+#product-services, #devices {
+    width: 100%;
+}
+
+#product-services {
+
+}
+
+.inputs label:nth-child(1) {
+    display: block;
+    width: 400px;
+    vertical-align: top;
+}
+
+#devices-holder .inputs label {
+    display: block;
+    width: 400px !important;
+    vertical-align: top;
+}
+
+.widget {
+    position: relative;
+}
+
+#quote-item-header {
+    padding: 2px 10px; background: -moz-linear-gradient(center top , #FAFAFA 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+}
+
+#alertContent li {
+    color: #3D3D3D;
+    font-size: 11px;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: 2.1em;
+    list-style: square outside none;
+    margin-bottom: 0.05em;
+}
+/** SLIDER */
+.ui-slider {
+    margin-bottom: 20px;
+    width: 100%;
+    background: none repeat scroll 0 0 #D4D4D4
+}
+
+.ui-slider-scale li {
+    position: absolute !important;
+    top: 15px;
+}
+.ui-slider-scale li span:first-child {
+    color: #777777;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 -4px !important;
+    width: 100px;
+}
+
+/** CHECKOUT */
+
+.checkout_form {
+    color: #444444;
+}
+.checkout_form label {
+    display: inline-block;
+    width: 175px;
+    font-size: 16px;
+}
+
+label[for="TblclientInsuranceYes"], label[for="TblclientInsuranceNo"], label[for="TblclientCarrier1"], label[for="TblclientCarrier2"] {
+    width: 60px;
+    margin-left: 5px;
+}
+
+.checkout_form .input {
+    margin-top: 10px; 
+    margin-right: 10px;
+}
+
+.checkout_form label.error {
+    margin-left: 175px;
+    width: 300px;
+    color: #c01;
+    font-size: 14px;
+}
+
+.checkout_form .input input[type='text'] {
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 300px
+}
+
+.checkout_form select {
+    width: 300px; 
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+#addresses .checkbox label {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+#validate_location {
+    background: none repeat scroll 0 0 #F3F3F3;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset;
+    color: #424242;
+    font-family: "Open Sans",Verdana,'Helvetica Neue',Helvetica,Arial,Geneva,sans-serif;
+    font-size: 16px;
+    outline: medium none;
+    padding: 8px 15px;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    text-decoration:none;
+    cursor: pointer;    
+}
+
+.submit input[type="submit"] {
+    font-size: 16px;
+    padding: 7px 15px;
+    cursor: pointer; 
+}
+
+#manufacturer_links {
+    margin: 0;
+    padding: 0;
+    background: none repeat scroll 0 0 #333333;
+}
+
+#manufacturer_links li {
+    display: inline-block;
+    padding: none;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 !important;
+    margin-right: -4px !important;
+}
+
+#quote_nav {
+    padding: 0;
+    margin-top: 10px;;
+}
+
+#quote_nav li {
+    /* fallback/image non-cover color */
+    background-color: #494949; 
+
+    /* Safari 4+, Chrome 1-9 */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a9a9a9), to(#494949));
+
+    /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+    background-image: -webkit-linear-gradient(bottom, #494949, #a9a9a9); 
+
+    /* Firefox 3.6+ */
+    background-image: -moz-linear-gradient(bottom, #494949, #a9a9a9);
+
+    /* IE 10+ */
+    background-image: -ms-linear-gradient(bottom, #494949, #a9a9a9);
+
+    /* Opera 11.10+ */
+    background-image: -o-linear-gradient(bottom, #494949, #a9a9a9);
+    
+    list-style: none;
+    margin:0;
+    border-bottom: 1px solid #4A4A4A;
+    border-top: 1px solid #858585;
+    position: relative;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+
+#quote_nav li:hover{
+    background-color: #084a00; 
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0ab701), to(#084a00));
+    background-image: -webkit-linear-gradient(bottom, #084a00, #0ab701); 
+    background-image: -moz-linear-gradient(bottom, #084a00, #0ab701);
+    background-image: -ms-linear-gradient(bottom, #084a00, #0ab701);
+    background-image: -o-linear-gradient(bottom, #084a00, #0ab701);
+}
+
+#quote_nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: inline-block;
+    width: -moz-available;
+    line-height: 25px;
+}
+
+#quote_nav li:nth-child(3) ul {
+    right: 0;
+    top: 8px;
+    width: 100%;
+    z-index: 1;
+    background: none;
+}
+
+#quote_nav li:nth-child(3) ul li {
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+#quote_nav li:nth-child(3) ul li label{
+    display: inline-block;
+    font-size: 12px;
+    color: #fff;
+    width: 105px;
+}
+
+#quote_nav li:nth-child(3) ul li a {
+    width: 25% !important;
+    font-size: 12px;
+    padding: 0;
+}
+
+#quote_nav li:nth-child(3) ul li a:hover {
+    color: #000;
+}
+
+/** datacenters */
+#datacenters {
+    margin-top: 20px;
+}
+#datacenters .input {
+    line-height: 25px;
+}
+
+#container #content {
+    background: #fff;
+    border: 1px solid #d5d5d5;
+}
+
+/** Review CSS */
+#review_container label {
+    color: #333;
+    font-size: 16px;
+}
+#review_container div label:first-child {
+    color: green;
+}
+#review_container div label:last-child {
+    margin-left: 10px;
+    word-wrap: break-word;
+    display: inline-block;
+    width: 250px;
+    font-size: 14px;
+}
+#helpBtn {
+    text-decoration: none;
+    color: #777;
+    display: inline-block;
+    width: 40px;
+    line-height: normal;
+}
+
+#helpBtn:hover {
+    color: #3D3D3D;
+}
+
+#visitcheckout-link-holder {
+    border: 2px solid #D5D5D5;
+    padding: 35px;
+    text-align: center;
+}
+
+#visitcheckout-link-holder h1 {
+    margin: 0px;
+    line-height: 45px;
+    font-weight: normal;
+}
+
+#visitcheckout-link-holder h1 a {
+    text-decoration: none;
+    color: #0F2EEA;
+}
+
+/** View tool */
+#main_quote_holder {
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+
+#review_title_holder {
+    background: #E9E9E9;
+    background: -moz-linear-gradient(center top , #FAFAFA 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #D5D5D5;
+    padding: 10px 2px;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+
+#review_title_holder h3{
+    padding: 0;
+    margin: 0;
+    display: table;
+    width: 100%;
+    -webkit-print-color-adjust: exact;
+    -moz-print-color-adjust: exact;
+}
+
+#review_content_holder div.row {
+    background: #EBEBEB;
+    display: table-row;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+
+#review_content_holder div.row label  {
+    margin:0;
+    display: table-cell;
+    padding: 5px;
+    border-right: 1px solid #D5D5D5;
+    border-bottom: 1px solid #D5D5D5;
+    min-width: 8%;
+    text-align: center;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+.product #review_content_holder div.row label:nth-child(1) {
+    min-width: 10%;
+}
+
+
+.product #review_content_holder div.row label:nth-child(2) {
+    min-width: 1%;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+
+
+.devices #review_content_holder div.row label:nth-child(1) {
+    min-width: 30%;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+
+#review_content_holder div.row label:last-child {
+    min-width: 1% !important;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+
+
+#review_content_holder div.row label:last-child {
+    border-right: none;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+
+#review_content_holder div.row:last-child label {
+    border-bottom: none;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+
+#products_container {
+    padding: 3px 10px;
+    width: 750px;
+    display: table-row;
+    border-bottom: 1px solid #D5D5D5;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+
+.total {
+    font-size: 14px;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+
+.total h3 {
+    margin:0;
+    font-weight: normal;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial, sans-serif; color: #444;
+}
+
+.total label:last-child, .total label:nth-child(3), .total label:nth-child(4) {
+    margin:0;
+    -webkit-print-color-adjust: exact;
+    font: 12px/1.7em "Open Sans", "trebuchet ms", arial,sans-serif;
+    color: #444;
+}
+
+.ui-slider-tic {
+     float: left;
+     height: 9px;
+     margin-top:-15px;
+}
+
+ol.ui-slider-scale li:last-child {
+    left: 90% !important;
+}
+
+ol.ui-slider-scale li:last-child span{
+    width: 70px;
+}
+
+
+ol.ui-slider-scale li:last-child span:first-child {
+    text-align: right;
+}
+
+/** override FIX for dialog jquery */
+.ui-dialog {padding: 0; padding-bottom: 20px;}
+.ui-dialog .ui-widget-header {}
+.ui-widget-header {
+    background: none;
+    border: none;
+    color: #008000;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.ui-widget-header .ui-dialog-titlebar-close {
+    top: 30%;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    padding: 0.4em 0.5em;
+    position: relative;
+}
+
+.ui-dialog .input {
+    margin-top: 10px;
+}
+
+.ui-dialog .input label {
+    display: inline-block;
+    width: 100px;
+}
+#phone_search_form .input label {font-size: 12px;}
+#search_method {width: 72%; font-size: 12px;}
+#search_value {width: 68%; font-size: 12px;}
+#findNumberBtn, #setNumbers, #checkOutBtn {
+    background-color: #494949;
+    background-image: -moz-linear-gradient(center bottom , #494949, #A9A9A9);
+    border-bottom: 1px solid #4A4A4A;
+    border-radius: 5px 5px 5px 5px;
+    border-top: 1px solid #858585;
+    list-style: none outside none;
+    margin: 8px 0 0;
+    position: relative;
+    color: 0;
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+#findNumberBtn {
+    width: 364px !important;
+}
+
+.ui-widget-overlay {
+    background: black;
+    opacity: 0.5;
+}
+
+#browser span {
+    font-size: 14px;
+    vertical-align: top;
+}
+
+#setNumbers {
+    padding: 5px 10px;
+    display: none;
+}

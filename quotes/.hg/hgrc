@@ -1,0 +1,6 @@
+[paths]
+default = /root/repo/quotes
+
+[ui]
+username = John Laniba <johnmrs06@gmail.com>
+

@@ -1,0 +1,135 @@
+#toggle-visibility {
+    background-image: url("../images/sprite/sprite-16-black.png");
+    background-position: 0 -3167px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    right: 85px;
+    margin-left: 0;
+    margin-right: 0;
+    top: 12px;
+    position: absolute;
+    width: 16px;
+}
+#visibility {
+    position: absolute;
+    right: 0px;
+    color: green;
+    width: 80px;
+    text-align: center; 
+    display: inline-block;
+}
+
+#addProductPane {
+    border-top: 1px solid #d5d5d5;
+    padding: 5px;
+    background: -moz-linear-gradient(center top , #FFFFFF 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
+}
+
+#addProductPane a {
+    color: #333333;
+    font-weight: bold;
+}
+
+#addProductForm, #addDatacenterForm {
+    border: 1px solid #d5d5d5;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    z-index: 99;
+    background: #fff;
+    width: 250px;
+    height: 160px;
+    display: none;
+}
+
+#addDatacenterForm {
+    height: 290px;
+}
+
+#addProductForm #header, #addDatacenterForm #header{
+    height: 30px;
+    color: #333;
+    line-height: 30px;
+    padding-left: 10px;
+    width: 241px;
+    font-weight: bold;
+    font-size: 14px;
+    background: -moz-linear-gradient(center top , #FAFAFA 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+#addProductForm form, #addDatacenterForm form {
+    padding: 10px;
+}
+
+#addProductForm #close-btn, #addDatacenterForm #close-btn {
+    background: url("../../images/sprite/sprite-24-black.png") repeat scroll 0 44px transparent;
+    height: 24px;
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    width: 24px;
+    cursor: pointer;
+    z-index:100;
+}
+
+textarea {
+	border: none;
+	background: none;
+	box-shadow: none;
+	width: 100%;
+	min-height: 30px;
+}
+
+#datacenters #wrap{
+    border-top: 1px solid #D5D5D5;
+}
+#datacenters #wrap div{
+    display: inline-block;
+}
+
+#datacenters #wrap div {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 7px 5px;
+    border-right: 1px solid #D5D5D5;
+}
+
+#datacenters #wrap div:first-child {
+    width: 30%;
+}
+
+#datacenters #wrap div:nth-child(2){
+    width: 10%;
+}
+#datacenters #wrap div:nth-child(3){
+    width: 20%;
+}
+
+#datacenters #wrap div:nth-child(4){
+    width: 10%;
+}
+
+#datacenters #wrap div:last-child {
+    width: 5%;
+    border: none;
+}
+
+#datacenters div div #dcremove {
+    background-image: url("../../images/sprite/sprite-16-black.png");
+    background-position: 0 -7172px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    left: 16px;
+    margin-left: 3px;
+    margin-right: 0;
+    top: 14px;
+    vertical-align: middle;
+    width: 16px;
+}
+#datacenters div div #dcremove:hover {
+    background-position: 0 -7216px;
+}

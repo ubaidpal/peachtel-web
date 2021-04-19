@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+	<script type="text/javascript" src="scripts/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery-ui-1.7.1.custom.min.js"></script>
+	<script type="text/javascript" src="scripts/selectToUISlider.jQuery.js"></script>
+
+	<link rel="stylesheet" href="css/redmond/jquery-ui-1.8.16.custom.css" type="text/css" />
+	<link rel="Stylesheet" href="css/ui.slider.extras.css" type="text/css" />
+	<link type="text/css" href="css/style.css" media="screen" rel="Stylesheet" />
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				setFields();
+				//resets radios so none are checked on page load
+				$("input:radio.formE").prop('checked', false);
+				createSlider2("lines");
+				createSlider("phoneNumbers");
+				createSlider("minutes");
+				createSlider("setup");
+			});
+		</script>
+
+		<title>PeachTEL</title>
+	</head>
+	<body>
+		<div class="everything">
+			<div class="logo">
+				<h1>PeachTEL</h1>
+			</div>
+			<div class="left">
+				<div class="section">
+					<p class="ui-dialog-titlebar ui-widget-header ui-corner-all header">Lines</p>
+					<div class="UIslider">
+					  <select name="lines" id="lines" class="formE lines">
+					  <option value="1" price="10" selected="selected">1</option>
+					  <option value="2" price="15">2</option>
+					  <option value="5" price="50">5</option>
+					  <option value="10" price="75">10</option>
+					  <option value="50" price="100">50</option>
+					  <option value="100" price="150">100</option>
+					  </select>
+					</div>
+				</div>
+				<div class="section">
+					<p class="ui-dialog-titlebar ui-widget-header ui-corner-all header">Phone Numbers</p>
+					<div class="UIslider">
+					  <select name="phoneNumbers" id="phoneNumbers" class="formE">
+					  <option value="1" price="10" selected="selected">1</option>
+					  <option value="2" price="15">2</option>
+					  <option value="5" price="50">5</option>
+					  <option value="10" price="75">10</option>
+					  <option value="50" price="100">50</option>
+					  </select>
+					</div>
+				</div>
+				<div class="section">
+					<p class="ui-dialog-titlebar ui-widget-header ui-corner-all header">Minutes</p>
+					<div class="UIslider">
+					  <select name="minutes" id="minutes" class="formE">
+					  <option value="10" price="10" selected="selected">10</option>
+					  <option value="100" price="15">100</option>
+					  <option value="500" price="50">500</option>
+					  <option value="1000" price="75">1000</option>
+					  <option value="5000" price="100">5000</option>
+					  <option value="10000" price="150">10000</option>
+					  </select>
+					</div>
+				</div>
+				<div class="section">
+					<p class="ui-dialog-titlebar ui-widget-header ui-corner-all header">Phones</p>
+					<p>form</p>
+				</div>
+				<div class="section">
+					<p class="ui-dialog-titlebar ui-widget-header ui-corner-all header">Setup</p>
+					<div class="UIslider">
+					  <select name="setup" id="setup" class="formE">
+					  <option value="Default" price="0" selected="selected">Default</option>
+					  <option value="Remote" price="100">Remote</option>
+					  <option value="Onsite" price="500">Onsite</option>
+					  </select>
+					</div>
+				</div>
+				<div class="section">
+					<p class="ui-dialog-titlebar ui-widget-header ui-corner-all header">Support</p>
+					<input type="radio" name="support" price="10" value="Basic Support" class="formE" /> Basic Support<br>
+					<input type="radio" name="support" price="50" value="Business Hours Support" class="formE" /> Business Hours Support<br>
+					<input type="radio" name="support" price="100" value="All Hours Support" class="formE" /> All Hours Support<br>
+				</div>
+				<div class="section">
+					<p class="ui-dialog-titlebar ui-widget-header ui-corner-all header">Temp for forcing Cart scroll</p>
+					1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0<br><br>
+				</div>
+			</div>
+			<div class="right">
+				<div class="cart">
+					<p class="header">Quote</p>
+					<p>Monthly</p>
+					<div class="clear subheader">Lines</div>
+					<div class="quoteLeft linesValue"></div><div class="quoteRight monthlyItem linesPrice"></div>
+					<div class="clear subheader">Phone Numbers</div>
+					<div class="quoteLeft phoneNumbersValue"></div><div class="quoteRight monthlyItem phoneNumbersPrice"></div>
+					<div class="clear subheader">Minutes</div>
+					<div class="quoteLeft minutesValue"></div><div class="quoteRight monthlyItem minutesPrice"></div>
+					<div class="clear subheader">Support</div>
+					<div class="quoteLeft supportValue"></div><div class="quoteRight monthlyItem supportPrice"></div>
+					<p class="header">Monthly Total</p>
+					<div class="monthlyTotal"></div>
+					<p class="clear">One-Time</p>
+					<div class="clear subheader">Phones</div>
+					<div class="quoteLeft phonesValue"></div><div class="quoteRight oneTimeItem phonesPrice"></div>
+					<div class="clear subheader">Setup</div>
+					<div class="quoteLeft setupValue"></div><div class="quoteRight oneTimeItem setupPrice"></div>
+					<p class="header">One-Time Total</p>
+					<div class="oneTimeTotal"></div>
+					<p class="header">Grand Total</p>
+					<div class="cartTotal"></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<script type="text/javascript" src="scripts/functions.js"></script>
+	</body>
+</html>

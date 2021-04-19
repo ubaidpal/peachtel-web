@@ -1,0 +1,246 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: arial;
+}
+
+#header {
+    background :-moz-linear-gradient(center top , #3F3F3F 0%, #222222 100%) repeat scroll 0 0 transparent;
+    padding: 10px 10px;
+}
+
+#header h1 a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#content {
+    min-height: 580px;
+}
+
+#footer {
+    margin-top: 20px;
+    height: 40px;
+    background :-moz-linear-gradient(center top , #3F3F3F 0%, #222222 100%) repeat scroll 0 0 transparent
+}
+
+
+ul, li {
+    margin : 0 !important;
+}
+
+a, label, p {
+    font-size: 14px;
+}
+
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #D5D5D5;
+}
+
+input, select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+}
+
+/** Container */
+.main_container {
+    min-height: 430px;
+}
+
+.login_panel {
+    width: 400px;
+    padding: 10px;
+    height: 250px;
+    margin: 100px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background:  #fff7ff;
+}
+
+.nav_holder {
+    display: inline-block;
+    vertical-align:top;
+}
+
+.nav_holder div div {
+    display:inline-block;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 15px 10px;
+    border-top-left-radius: 10px;
+    font-size: 12px !important;
+    color : #fff !important;
+    text-decoration: none;
+}
+
+.content_holder {
+    display: inline-block;
+    width: 100%;
+    vertical-align:top;
+    border: 1px solid #cccccc;  
+}
+
+.page_menu {
+    padding: 0 2px;
+    text-align: right;
+}
+
+.menu_btn {
+    display:inline-block;
+    margin-left: auto;
+    padding: 0 10px;
+}
+
+.menu_btn img{
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.addform_holder {
+    width: 300px;
+    margin:10px 30px;
+}
+
+legend {
+    color: #000 !important;
+}
+
+.main_content_holder {
+    width: 980px;
+    margin:auto;
+}
+
+.info_holder {
+    padding: 10px;
+}
+
+/** PAGES */
+#contentHeader {
+    background: -moz-linear-gradient(center top , #FAFAFA 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+    border-radius: 10px;
+    margin: 20px 0 20px 0;
+    padding : 10px 20px;
+    border: 1px solid #D5D5D5;
+}
+
+.trunking_main_holder table {
+    width: 100%;
+}
+
+.trunking_main_holder table th, .form_header {
+    background: -moz-linear-gradient(center top , #FAFAFA 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #D5D5D5;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #D5D5D5;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+
+
+.trunking_main_holder table td {
+    border: 1px solid #D5D5D5;
+    border-top:none;
+    padding: 10px;
+}
+
+.trunking_main_holder table tr td:nth-child(2) {
+    border-left:none;
+}
+
+.add_trunk_form label {
+    display: inline-block;
+    width: 100px;
+}
+
+.add_trunk_form .input {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.form_header {
+    text-align:center;
+}
+
+.form_content {
+    border: 1px solid #D5D5D5;
+    padding: 10px;
+}
+
+/** Trunking */
+.trunking_nav {
+    margin: 0 !important;
+}
+
+.trunking_nav li {
+    background: -moz-linear-gradient(center top , #FAFAFA 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #D5D5D5;
+    border-bottom: none;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+}
+
+.trunking_nav li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.trunking_nav li:hover, .trunking_nav li.selected {
+    background: -moz-linear-gradient(center top , #E9E9E9 0%, #FAFAFA 100%) repeat scroll 0 0 transparent;
+}
+
+.trunk_main_cont {
+    padding: 10px;
+    border: 1px solid #D5D5D5;
+}
+
+.page_menu {
+    padding: 10px;
+    text-align: right;
+}
+
+.bg_nav div div {
+    background: -moz-linear-gradient(center top , #FAFAFA 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #D5D5D5;
+    border-bottom: none;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    position: relative;
+    padding: 5px !important;
+    
+}
+
+.bg_nav div div:hover {
+    background: -moz-linear-gradient(center top , #E9E9E9 0%, #FAFAFA 100%) repeat scroll 0 0 transparent;
+}
+
+.bg_nav div div a {
+    text-decoration: none;
+}
+
+.header {
+    padding: 10px;
+    background: -moz-linear-gradient(center top , #E9E9E9 0%, #FAFAFA 100%) repeat scroll 0 0 transparent;
+}
+
+.filter_form .input{
+    margin-top:10px;
+}

@@ -1,0 +1,38 @@
+#trunking_tabs {
+    margin-top:20px;
+}
+#trunking_tabs ul li {
+    display: inline-block;
+    padding: 1px 20px;
+    border: 1px solid #383838;
+    background: #C3C7CB;
+    background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#383838));
+    background: -moz-linear-gradient(bottom, #383838, #666);
+    border-radius:10px 10px 0 0;
+    line-height: 30px !important;
+    height: 30px;
+}
+
+#trunking_tabs ul li a {
+    color: #fff !important;
+}
+
+#trunking_tabs div {
+    display: none;
+    padding: 5px;
+    border: 1px solid #383838;
+    min-height: 30  0px;
+}
+
+.selected {
+    display: block !important;
+}
+
+.active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#383838), to(#666)) !important;
+    background: -moz-linear-gradient(bottom, #666, #383838) !important;
+}
+
+.active a {
+    text-shadow: none !important;
+}

@@ -1,0 +1,28 @@
+/* block top search */
+#search_block_top {
+    position: absolute;
+    right: 0;
+    top: 112px;
+}
+#search_block_top p {padding:0;}
+#search_block_top #search_query_top {
+    border: 1px solid #FFFFFF;
+    border-radius: 5px 0 0 5px;
+    color: #666666;
+    float: left;
+    font-size: 16px;
+    height: 23px;
+    padding: 5px;
+    width: 200px;
+}
+
+#search_block_top .button {
+    background: none repeat scroll 0 0 #383838;
+    border: medium none;
+    border-radius: 0 5px 5px 0;
+    color: #FFFFFF;
+    float: left;
+    padding: 10px;
+	text-transform:uppercase;
+}
+

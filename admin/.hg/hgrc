@@ -1,0 +1,6 @@
+[paths]
+default = /root/repo/itaki_admin
+
+
+[ui]
+username = SystemAdmin <admin@itakinet.com>

@@ -1,0 +1,182 @@
+	//create cart array for storing cart data
+
+	//Form elements on change event
+	$('.formE').change(function() {
+		$("." + $(this).attr('name') + "Value").text($(this).val());
+		$("." + $(this).attr('name') + "Price").text("$" + $(this).attr("price"));
+		$("." + $(this).attr('name') + "Price").attr('price',$(this).attr("price"));
+		calculateTotal();
+	});
+
+	function setFields(){
+		calculateTotal();
+	}
+
+	function createSlider(name){
+		$('#'+name).selectToUISlider({
+			tooltip:false,
+			sliderOptions: {
+				animate:true,
+				change:function(e, ui) {
+					$("." + name + "Price").fadeOut(500, function(){
+						$("." + name + "Price").text('$'+$('#'+name+' option').eq(ui.values[0]).attr("price")).fadeIn(500);
+					});
+					$("." + name + "Value").fadeOut(500, function(){
+						$("." + name + "Value").text($('#'+name+' option').eq(ui.values[0]).text()).fadeIn(500);
+					});
+					$("." + name + "Price").attr('price',$('#'+name+' option').eq(ui.values[0]).attr("price"));
+					calculateTotal();
+				}
+			}
+		}).hide();
+	}
+
+	function createSlider2(name){
+		$('#'+name).slider({
+				value:10,
+				min:1,
+				max:1000,
+				animate:true,
+				change:function(e, ui) {
+					$("." + name + "Price").fadeOut(500, function(){
+						$("." + name + "Price").text('$'+$('#'+name+' option').eq(ui.values[0]).attr("price")).fadeIn(500);
+					});
+					$("." + name + "Value").fadeOut(500, function(){
+						$("." + name + "Value").text($('#'+name+' option').eq(ui.values[0]).text()).fadeIn(500);
+					});
+					$("." + name + "Price").attr('price',$('#'+name+' option').eq(ui.values[0]).attr("price"));
+					calculateTotal();
+			}
+		}).hide();
+	}
+
+	function calculateTotal(){
+		var cartTotalValue = 0;
+		$(".quoteRight").each(function() {
+			//add only if the value is number
+			var PE = $(this).attr("price");
+			if(!isNaN(PE) && PE.length!=0) {
+				cartTotalValue += parseFloat(PE);
+			}
+
+		});
+		//Fade out the old total and in the new total
+		$('.cartTotal').fadeOut(1000,function(){
+			$('.cartTotal').text("$" + cartTotalValue).fadeIn(2000);
+		});
+
+		var monthlyTotalValue = 0;
+		$(".monthlyItem").each(function() {
+			//add only if the value is number
+			var PE = $(this).attr("price");
+			if(!isNaN(PE) && PE.length!=0) {
+				monthlyTotalValue += parseFloat(PE);
+			}
+
+		});
+		//update the total displayed if it has changed - fade the value out then back in with the new total
+		if($('.monthlyTotal').attr('price') != monthlyTotalValue){
+			$('.monthlyTotal').attr('price',monthlyTotalValue);
+			$('.monthlyTotal').fadeOut(1000,function(){
+				$('.monthlyTotal').text("$" + monthlyTotalValue).fadeIn(2000);
+			});
+		}
+
+		var oneTimeTotalValue = 0;
+		$(".oneTimeItem").each(function() {
+			//add only if the value is number
+			var PE = $(this).attr("price");
+			if(!isNaN(PE) && PE.length!=0) {
+				oneTimeTotalValue += parseFloat(PE);
+			}
+
+		});
+		//update the total displayed if it has changed - fade the value out then back in with the new total
+		if($('.oneTimeTotal').attr('price') != oneTimeTotalValue){
+			$('.oneTimeTotal').attr('price',oneTimeTotalValue);
+			$('.oneTimeTotal').fadeOut(1000,function(){
+				$('.oneTimeTotal').text("$" + oneTimeTotalValue).fadeIn(2000);
+			});
+		}
+	}
+
+	//Admin
+	$('.saveCategory').click(function(){
+		submitCategoryChanges($(this).attr('id'));
+		
+	});
+	function stripName(withName, name){
+		return withName.replace(name,"");
+	}
+	function findRowIdInArray(arr,id){
+		  //search through given array to find which row contains the ID we are looking for
+		  //return the appropriate row for the ID, or if not found return length+1 for a new row
+		len = arr.length;
+		for(j=0;j<arr.length;j++){
+			if(arr.length==0){
+				len = 0;
+			}
+			if(arr[j]){
+				if(arr[j]['id'] == id){
+					len = j;
+				}
+			}
+		}
+		return len;
+	}
+	function submitCategoryChanges(name){
+		changesP = new Array();
+		changesC = new Array();
+		  //printArray is used for Debugging later on
+		printArray = "";
+		  //get category information
+		changesC['id'] = $('.'+name+'Name').attr('id');
+		changesC['name'] = $('.'+name+'Name').attr('value');
+		changesC['description'] = $('.'+name+'Description').val();
+		changesC['displayType'] = $('#'+name+changesC['id']+'DisplayType').val();
+		changesC['order'] = $('.'+name+'Name').attr('order');
+		changesC['billType'] = $('#'+name+changesC['id']+'BillType').val();
+		if ($('#'+name+'Visible').is(':checked')){changesC['visible'] = 1;}else{changesC['visible'] = 0;}
+		//for each product field in the category we are saving
+		$('.'+name+'Prod').each(function(){
+			  //find the row in the changes array that has the database ID we are adding these fields for
+			x = findRowIdInArray(changesP,$(this).attr('row'));
+			  //if we haven't alread, set aside a new row in the array for our data
+			if(!changesP[x]){changesP[x] = new Array();}
+			  //update the data for this row in the array, we will be adding a new value to the array each time
+			changesP[x]['id'] = $(this).attr('row');
+			  //check if Option to treat it different
+			if($(this).attr('name') == name+changesP[x]['id']+"Visible"){
+				changesP[x][stripName($(this).attr('name'),name+changesP[x]['id'])] = $('#'+name+changesP[x]['id']+'Visible').val();
+			}else{
+				changesP[x][stripName($(this).attr('name'),name)] = $(this).val();
+			}
+		});
+
+		  //submit to script that saves to DB
+		$("#popUpInformation").html("<p id='returnData' class='center'></p>");
+		$("#popUpInformation").dialog('open');
+		  //update category
+			$.post('saveChanges.php', { action: 'updateCategory', id: changesC['id'], name: changesC['name'], description: changesC['description'], billType: changesC['billType'], visible: changesC['visible'], order: changesC['order'], displayType: changesC['displayType'] }, function(data) {
+				returnData = $('#returnData').html();
+				$('#returnData').html(returnData+"<br>"+data);
+			});
+		  //update each product
+		for(p=0;p<changesP.length;p++){
+			$.post('saveChanges.php', { action: 'updateProduct', id: changesP[p]['id'], name: changesP[p]['Name'], value: changesP[p]['Value'], price: changesP[p]['Price'], visible: changesP[p]['Visible'], order: changesP[p]['Order'] }, function(data) {
+				returnData = $('#returnData').html();
+				$('#returnData').html(returnData+"<br>"+data);
+			});
+		}
+		returnData = $('#returnData').html();
+		$('#returnData').html(returnData+"<br>Update Complete");
+		//debugging
+		//printArray = "id ="+changesC['id']+" <br>Name="+changesC['name']+" <br>Description="+changesC['description']+" <br>BillType="+changesC['billType']+" <br>Visible="+changesC['visible']+" <br>Order="+changesC['order']+" <br>DisplayType="+changesC['displayType']+"<br>\n";
+		//$('#returnData').html(printArray);
+	}
+	$("#popUpInformation").dialog({
+		autoOpen: false,
+		height: 300,
+		width: 450,
+		modal: true
+	});

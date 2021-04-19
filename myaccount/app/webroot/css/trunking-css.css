@@ -1,0 +1,131 @@
+.trunking_main_holder {
+    padding: 20px;
+    width: 80%;
+}
+
+.trunking_main_holder table {
+    width: 100%;
+}
+
+.trunking_main_holder table th, .form_header {
+    background: -moz-linear-gradient(center top , #FAFAFA 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #D5D5D5;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #D5D5D5;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+
+
+.trunking_main_holder table td {
+    border: 1px solid #D5D5D5;
+    border-top:none;
+    padding: 10px;
+}
+
+.trunking_main_holder table tr td:nth-child(2) {
+    border-left:none;
+}
+
+.add_trunk_form label {
+    display: inline-block;
+    width: 100px;
+}
+
+.add_trunk_form .input {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.form_header {
+    text-align:center;
+}
+
+.form_content {
+    border: 1px solid #D5D5D5;
+    padding: 10px;
+}
+
+/** Trunking */
+.trunking_nav {
+    margin: 0 !important;
+    margin-bottom: -6px !important;
+}
+
+.trunking_nav li {
+    background: -moz-linear-gradient(center top , #FAFAFA 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #D5D5D5;
+    border-bottom: none;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+}
+
+.trunking_nav li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.trunking_nav li:hover, .trunking_nav li.selected {
+    background: -moz-linear-gradient(center top , #E9E9E9 0%, #FAFAFA 100%) repeat scroll 0 0 transparent;
+}
+
+.trunk_main_cont {
+    padding: 10px;
+    border: 1px solid #D5D5D5;
+}
+
+.page_menu {
+    padding: 10px;
+    text-align: right;
+}
+
+.bg_nav div div {
+    background: -moz-linear-gradient(center top , #FAFAFA 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #D5D5D5;
+    border-bottom: none;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    position: relative;
+    padding: 5px !important;
+    
+}
+
+.bg_nav div div:hover {
+    background: -moz-linear-gradient(center top , #E9E9E9 0%, #FAFAFA 100%) repeat scroll 0 0 transparent;
+}
+
+.bg_nav div div a {
+    text-decoration: none;
+}
+
+.label_capt {
+    width: 100px;
+}
+
+.table_title {
+    padding: 5px;
+    margin:15px 0 0 0;
+    background :-moz-linear-gradient(center top , #FAFAFA 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+    border-radius: 5px;
+    border: 1px solid #D5D5D5;
+    width: 98.5%;
+}
+
+.table_title h3 {
+    margin:0 !important;
+}
+
+.table_capt {
+    border-radius: 5px 5px 0 0;
+}

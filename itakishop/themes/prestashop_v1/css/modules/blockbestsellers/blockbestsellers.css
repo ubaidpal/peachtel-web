@@ -1,0 +1,102 @@
+/* Block best sellers */
+#best-sellers_block_center {border-bottom: 1px dotted #CCCCCC;}
+#best-sellers_block_center h4 {
+    background: none repeat scroll 0 0 transparent;
+    font-family: Agency;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 0;
+    text-shadow: none;
+    display:block;
+    line-height: 36px;
+}
+
+#best-sellers_block_center h4 label {
+    color: #333333;
+}
+
+#best-sellers_block_center h4 span {
+    color: #F28F00;
+}
+
+#best-sellers_block_center h5 {
+    color: #FB9F22;
+    font-size: 14px !important;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+#best-sellers_block_center h5 a {
+    color: #888888;
+    padding: 10px 0 5px 0;
+    font-size: 14px !important;
+    font-weight: normal;
+    text-decoration: none;
+    height: 30px;
+}
+
+#best-sellers_block_center h5 a:hover {
+    color: #333;
+}
+
+#best-sellers_block_center ul {margin-bottom:5px;}
+#best-sellers_block_center li {
+    width: 126px;
+	display: inline-block;
+    margin-right: 10px;
+	padding:0 !important;
+}
+#best-sellers_block_center li:last-child {
+    margin-right: 0;
+}
+#best-sellers_block_center li.last_item {border:none}
+#best-sellers_block_center li a.content_img {
+	display:block;
+	float:left;
+	padding:1px;
+	height:47px;
+	width:67px;
+	text-decoration:none;
+	background:#333
+}
+#best-sellers_block_center li span.number {
+	display:block;
+	float:left;
+	margin-top:6px;
+	width:20px;
+	font-weight:bold;
+	font-size:18px;
+	color:#fff;
+	text-align:center
+}
+#best-sellers_block_center li img {
+	border:1px solid #ededed;
+}
+#best-sellers_block_center li p {
+	float:left;
+	margin-left:7px;
+	padding:0;
+	width:125px;
+	font-weight:bold;
+	font-size:12px
+}
+#best-sellers_block_center li .product_image {
+    height: 125px;
+}
+#best-sellers_block_center li .price {
+	font-weight:bold;
+	font-size:14px;
+	color:#990000;
+
+}
+
+#best-sellers_block_center p.lnk {
+	padding:0;
+	text-align:right
+}
+#best-sellers_block_center .lnk .button_large {
+	padding:0;
+	border:none;
+	background:none
+}
+#best-sellers_block_center .lnk .button_large:hover {text-decoration: overline}

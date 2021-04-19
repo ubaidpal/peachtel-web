@@ -1,0 +1,5 @@
+#Options All -Indexes ErrorDocument 404 /index.php
+RewriteEngine On
+RewriteRule ^$ myaccount/users/login
+RewriteRule ^quotes/(.*)$ myaccount/quotes/$1
+RewriteRule ^contact_us.html$ myaccount/contact_us.html

@@ -1,0 +1,74 @@
+/* 
+    Document   : reyazsStyle
+    Created on : Nov 16, 2012, 11:25:46 PM
+    Author     : shinedezign
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+#searchedItemss{
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-radius: 2px 2px 2px 2px;
+    border-right: 1px solid;
+    float: right;
+    /*height: 57px; */
+    /*left: -9%;*/
+    position: relative;
+    top: -3px;
+    z-index: -1;
+    font-family: "Open Sans", Verdana, 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+    font-size: 13px;
+    color: #424242;
+    cursor: default
+}
+.item_active{
+    cursor: default;
+    font-family: "Open Sans", Verdana, 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+    font-size: 13px;
+    background-color: #4993D7; 
+    color: white;
+    padding-left: 10px;
+}
+#searchedItems{
+    position: relative;
+    /*left: 26%; */
+    z-index: 1;  
+    background: #fff;
+    font-family: "Open Sans", Verdana, 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+    font-size: 13px;
+    color: #424242;
+    cursor: default;
+    /*top: 23px; */
+}
+
+#searchedItems div{  color:#0a0; max-width: 300%; }
+/******/
+#add{
+    /*    float:left;*/
+    margin:10px 600px;
+    width:800px
+}
+#add button{
+    background:#599B00;
+}
+
+.tbl{
+    margin:0px 50px;
+}
+.font{
+    font-size:95%;
+    margin:-25px 69px;
+}
+.img{
+    margin:37px 49px;
+}

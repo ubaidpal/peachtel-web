@@ -1,0 +1,23 @@
+/* 
+    Document   : reyazs
+    Created on : Dec 6, 2012, 6:50:11 AM
+    Author     : Reyaz_s
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+.box_side { 
+  padding: 1.5em 12px .25em; 
+  margin-bottom: 2em; 
+  background: #EBEBEB; 
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width:210px;
+  margin-left:2px;
+  
+}

@@ -1,0 +1,103 @@
+<html>
+<head>
+<style>
+#quoteBox{
+	width:700px;
+	margin:0 auto;
+}
+.quoteHeader{
+	background-color:#dddddd;
+	margin-bottom:10px;
+}
+.quoteInfoBox{
+	float:left;
+	width:50%;
+}
+.quoteDescription{
+	float:left;
+	width:348px;
+	text-align:center;
+}
+.quoteQTY, .quoteMprice, .quoteOprice, .quoteSprice, .quoteItemTotal{
+	float:left;
+	width:68px;
+	text-align:center;
+	border-left:1px solid #000000;
+}
+.quoteLine{
+	border-bottom:1px solid #000000;
+
+}
+.quoteTotalBox{
+	float:right;
+	width:250px;
+}
+.totalLeft{
+	float:left;
+	text-align:right;
+	padding-right:5px;
+}
+.totalRight{
+	float:left;
+	text-align:left;
+	padding-left:5px;
+}
+.center{
+	text-align:center;
+}
+.print-edit{
+	text-align:right;
+	padding-right:20px;
+}
+.noBorder{
+	border:none;
+	padding:0 1px 0 1px;
+}
+.clear{
+	clear:both;
+}
+</style>
+</head>
+<body><div id="quoteBox">
+
+<p class="print-edit">Print - Edit<p>
+<div class="quoteHeader">
+	<div class="quoteInfoBox">
+		<p class="center">peachtel.com Quote Builder</p>
+		<p class="center">Quote ID Q123456</p>
+	</div>
+	<div class="quoteInfoBox">
+		<p>Customer Name<br>Printed on 00-00-0000</p>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="quoteLine">
+	<div class="quoteDescription">Item Description</div><div class="quoteQTY noBorder">Quantity</div><div class="quoteMprice noBorder">Monthly Price</div><div class="quoteOprice noBorder">One-Time Price</div><div class="quoteSprice noBorder">Setup Price</div><div class="quoteItemTotal noBorder">Total</div><div class="clear"></div>
+</div>
+<div class="quoteLine">
+	<div class="quoteDescription">Item 1</div>
+	<div class="quoteQTY">1</div>
+	<div class="quoteMprice">$100</div>
+	<div class="quoteOprice">$0</div>
+	<div class="quoteSprice">$10</div>
+	<div class="quoteItemTotal">$110</div>
+	<div class="clear"></div>
+</div>
+<div class="quoteTotalBox">
+	<div class="totalLeft">
+		<p>$0</p>
+		<p>$100</p>
+		<p>$10</p>
+		<p>$110</p>
+	</div>
+	<div class="totalRight">
+		<p>One-Time Total</p>
+		<p>Monthly Total</p>
+		<p>Setup Total</p>
+		<p>Grand Total</p>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+</div></body>

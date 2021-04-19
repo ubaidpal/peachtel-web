@@ -1,0 +1,12 @@
+Call from - PeachTEL_admin 
+Get mac address from rewrite
+Store mac address (0015651a3447) -success
+Include Provisioner library - success
+Call database query using curl - success
+writing family brand and model : yealink, t2x, T28 - success
+Insert data to generate files - success
+generate config files - success
+Begin write files in gen_files folder
+Writing data in y000000000000.cfg - success
+Writing data in 0015651a3447.cfg - success
+Return 0015651a3447.cfg to phone

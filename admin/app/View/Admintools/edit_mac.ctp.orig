@@ -1,0 +1,194 @@
+<div id="modalHeader">
+    <h2>Configure your phone</h2>
+    <a class="close" id="close" href="javascript:void(0);">Ã—</a>
+</div>
+<?php //pr($editData); ?>
+<div id="modalContent">
+    <form class="form" id="phone_data_form" onsubmit="return false;"> 
+        <div id="main_content">
+            <div id="div1"  class="field-group" >
+                <table width="420" border="0" cellspacing="5" cellpadding="2">
+                    <tr>
+                        <td width="202" align="left">  <label>Phone:</label> </td>
+                        <td width="284" align="left"> 
+                            <div class="selector" id="uniform-cardtype"> <span id="upper" style="-moz-user-select: none;"><?php echo $editData['Phonedata'][0]['Brandmodel']['Brand']." ".$editData['Phonedata'][0]['Brandmodel']['FriendlyName'] ?></span>
+                                <select name="Macid[phone_model_family]" id="phone_opt">
+
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left"><label>TimeZone:</label></td>
+                        <td align="left">
+                            <div class="selector" id="uniform-cardtype"> <span id="upper" style="-moz-user-select: none;"><?php echo $editData['Phonedata'][0]['DateTimeZone'] ?></span>
+                                <select name="Phonedata[0][DateTimeZone]" id="DropDownTimezone" value="<?php echo $editData['Phonedata'][0]['DateTimeZone'] ?>">
+                                    <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
+                                    <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
+                                    <option value="-10.0">(GMT -10:00) Hawaii</option>
+                                    <option value="-9.0">(GMT -9:00) Alaska</option>
+                                    <option value="-8.0">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                                    <option value="-7.0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                                    <option value="-6.0">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                                    <option value="-5.0">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                                    <option value="-4.0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                                    <option value="-3.5">(GMT -3:30) Newfoundland</option>
+                                    <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                                    <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
+                                    <option value="-1.0">(GMT -1:00 hour) Azores, Cape Verde Islands</option>
+                                    <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                                    <option value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+                                    <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
+                                    <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                                    <option value="3.5">(GMT +3:30) Tehran</option>
+                                    <option value="4.0">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                                    <option value="4.5">(GMT +4:30) Kabul</option>
+                                    <option value="5.0">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                                    <option value="5.5">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                                    <option value="5.75">(GMT +5:45) Kathmandu</option>
+                                    <option value="6.0">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                                    <option value="7.0">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                                    <option value="8.0">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                                    <option value="9.0">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                                    <option value="9.5">(GMT +9:30) Adelaide, Darwin</option>
+                                    <option value="10.0">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                                    <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                                    <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                                </select></div>
+                        </td>   
+
+                    </tr>
+                    <tr>
+                        <td align="left"> <label>MAC Address:</label> </td>
+                        <td align="left"><span id="mac_add" class='ticket'style="margin-left:2px;border-radius:8px;"><?php echo $editData['Macid']['MacID'] ?></span></td>
+                    </tr>
+
+                    <tr>
+                        <td width="22%"> <label>Registrations:</label>
+                        <td width="78%" >
+                            <div class="selector" id="uniform-cardtype"> <span id="upper" style="-moz-user-select: none;"><?php echo count($editData['Phonedata']) - 1; ?></span>
+                                <select name="registrations"  id="registrations" value="<?php echo count($editData['Phonedata']) - 1; ?>">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    </tr>
+                </table>
+                <hr style="margin: 0px"></hr>
+            </div>
+            <div  class="field-group" id="div2">
+                <?php 
+                $count = 1;
+                foreach($editData['Phonedata'] as $key => $addr): 
+                if($key != 0) :
+                ?>
+                
+                <table width="420" border="0" cellspacing="2" cellpadding="2" id="reg_table" class="line-<?php echo $count; ?>">
+                    <tbody id="show_registrations"> 
+
+                        <tr>
+                            <td width="30%"><label>Registration:</label></td>
+                            <td width="70%">
+                                <span id='reg_num1'><?php echo $count; ?></span>
+                                <input type="hidden" id='reg_val' name="Phonedata[<?php echo $count; ?>][Register]" value="<?php echo $count; ?>" />
+                                <input type="hidden" name="Phonedata[0][ExtensionNumber]" id="extension" value="200" />
+                                <input type="hidden" name="Phonedata[0][LocalPort]" id="extension" value="pbx.itaki.net" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="30%">  <label>Display Name:</label></td>
+                            <td width="70%">
+                                <input type="text" name="Phonedata[<?php echo $count; ?>][DisplayName]" value="<?php echo $addr['DisplayName']; ?>" id="displayname" /></td>
+                        </tr>
+
+                        <tr>
+                            <td width="30%">  <label>User Name:</label></td>
+                            <td width="70%">
+                                <input type="text" name="Phonedata[<?php echo $count; ?>][Username]" value="<?php echo $addr['Username']; ?>" id="username" /></td>
+                        </tr>
+
+                        <tr>
+                            <td align="left"><label>Password:</label></td>
+                            <td align="left">
+                                <input type="password" name="Phonedata[<?php echo $count; ?>][Password]" value="<?php echo $addr['Password']; ?>" id="pass1" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="30%">  <label>Auth Name:</label></td>
+                            <td width="70%">
+                                <input type="text" name="Phonedata[<?php echo $count; ?>][Authname]" value="<?php echo $addr['Authname']; ?>" id="authname" /></td>
+                        </tr>
+
+                        <tr>
+                            <td width="30%">  <label>Secret:</label></td>
+                            <td width="70%">
+                                <input type="text" name="Phonedata[<?php echo $count; ?>][Secret]" value="<?php echo $addr['Secret']; ?>" id="secret" /></td>
+                        </tr>
+
+                        <tr>
+                            <td width="30%">  <label>Server Host:</label></td>
+                            <td width="70%">
+                                <input type="text" name="Phonedata[<?php echo $count; ?>][ServerHost]" value="<?php echo $addr['ServerHost']; ?>" id="server_host" /></td>
+                        </tr>
+
+                        <tr>
+                            <td width="30%">  <label>Server Port:</label></td>
+                            <td width="70%">
+                                <input type="text" name="Phonedata[<?php echo $count; ?>][ServerPort]" value="<?php echo $addr['ServerPort']; ?>" id="server_post" /></td>
+                        </tr>
+
+                        <tr>
+                            <td width="30%">  <label>Server Expires:</label></td>
+                            <td width="70%">
+                                <input type="text" name="Phonedata[<?php echo $count; ?>][ServerExpires]" value="<?php echo $addr['ServerExpires']; ?>" id="server_expires" /></td>
+                        </tr>
+
+                        <tr>
+                            <td width="30%">  <label>Outbound Host:</label></td>
+                            <td width="70%">
+                                <input type="text" name="Phonedata[<?php echo $count; ?>][OutboundHost]" value="<?php echo $addr['OutboundHost']; ?>" id="outbound_host" /></td>
+                        </tr>
+
+                        <tr>
+                            <td width="30%">  <label>Outbound Port:</label></td>
+                            <td width="70%">
+                                <input type="text" name="Phonedata[<?php echo $count; ?>][OutboundPort]" value="<?php echo $addr['OutboundPort']; ?>" id="outbound_port" /></td>
+                        </tr>
+
+                        <tr>
+                            <td align="left"><label>Appearances:</label></td>
+                            <td align="left">
+                                <input type="text" name="Phonedata[<?php echo $count; ?>][Appearance]" value="<?php echo $addr['Appearance']; ?>" id="appearances" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr />
+                <?php 
+                $count++;
+                endif;
+                endforeach; ?>
+            </div>
+            <div style="text-align: right;margin-top: 2px ">
+                <input type="hidden" name="Macid[edit]" value="true" />
+                <input type="hidden" name="Macid[id]" id="update_mac_id" value="<?php echo $editData['Macid']['id'] ?>" />
+                <input type="hidden" name="Macid[MacID]" id="update_mac_id" value="<?php echo $editData['Macid']['MacID'] ?>" />
+                <input type="hidden" name="Phonedata[0][BrandModel.id]" id="friendlyname_form" value="<?php echo $editData['Phonedata'][0]['BrandModel.id'] ?>" />
+                <input type="button" name="reset" id="reset" value="Cancel" style="color: red" />
+                <input type="button" name="submit" id="submit" value="Submit Configuration" />  
+            </div>
+        </div>
+    </form>
+</div>

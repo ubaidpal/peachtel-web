@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+	<script type="text/javascript" src="../scripts/jquery-1.6.4.min.js"></script>
+	<!-- <script type="text/javascript" src="../scripts/jquery-ui-1.7.1.custom.min.js"></script> -->
+	<script type="text/javascript" src="../scripts/jquery-ui-1.8.16.custom.min.js"></script>
+
+	<link rel="stylesheet" href="../css/redmond/jquery-ui-1.8.16.custom.css" type="text/css" />
+	<link type="text/css" href="../css/style.css" media="screen" rel="Stylesheet" />
+	<link type="text/css" href="../css/adminStyle.css" media="screen" rel="Stylesheet" />
+
+		<title>PeachTEL Admin - WHMCS</title>
+	</head>
+	<body>
+	<?php require_once('db_functions.php'); ?>
+	<div id="popUpInformation"></div>
+
+		<div class="everything">
+			<div class="logo">
+				<h1>PeachTEL Admin - WHMCS</h1>
+			</div>
+			<div class="left">
+				<?php
+					$groups = getGroupListWHMCS();
+					for ($j=0;$j<count($groups);$j++){
+						echo "<div class='section'>\n";
+						  //determine if this this category is visible or not
+						if($groups[$j]['visible'] == 1){$categoryVisible = "checked='yes'";}else{$categoryVisible = "";}
+						echo "<p class='ui-dialog-titlebar ui-widget-header ui-corner-all header ".remSpaces($groups[$j]['name'])."Name' id='".$groups[$j]['ID']."' order='".$groups[$j]['order']."' value='".$groups[$j]['name']."'>".$groups[$j]['name']."<input type='checkbox' name='".remSpaces($groups[$j]['name'])."Visible' id='".remSpaces($groups[$j]['name'])."Visible' class='categoryVisible' ".$categoryVisible."></p>\n";
+						echo "<textarea class='categoryDescription ".remSpaces($groups[$j]['name'])."Description'>".$groups[$j]['description']."</textarea>\n";
+						$displaySelect1 = ""; $displaySelect2 = "";$billSelect1 = ""; $billSelect2 = "";
+						if($groups[$j]['displayType'] == 1){$displaySelect1 = "selected='yes'";}else{$displaySelect2 = "selected='yes'";}
+						if($groups[$j]['billType'] == 1){$billSelect1 = "selected='yes'";}else{$billSelect2 = "selected='yes'";}
+						echo "<p>Display Type <select id='".remSpaces($groups[$j]['name']).$groups[$j]['ID']."DisplayType'><option value='1' ".$displaySelect1.">Slider</option><option value='2' ".$displaySelect2.">Radio</option></select> ";
+						echo "  :  ";
+						echo " Bill Type <select id='".remSpaces($groups[$j]['name']).$groups[$j]['ID']."BillType'><option value='1' ".$billSelect1.">One-Time</option><option value='2' ".$billSelect2.">Monthly</option></select></p>";
+
+						$products = getProductListWHMCS($groups[$j]['ID']);
+
+						echo "<div class='categoryProductField'>Name</div><div class='categoryProductField'>Value</div><div class='categoryProductField'>Price</div><div class='categoryProductField'>Visible</div><div class='categoryProductField'>order</div>\n";
+						echo "<div class='clear'></div>\n";
+						for ($i=0;$i<count($products);$i++){
+							//determine if yes or no should be default for visible
+							$visibleYes = ""; $visibleNo = "";
+							if($products[$i]['visible'] == 0){$visibleNo = "selected='yes'";}else{$visibleYes = "selected='yes'";}
+							//display editable fields
+							echo "<div class='categoryProductField'><input type='text' name='".remSpaces($groups[$j]['name'])."Name' value='".$products[$i]['name']."' row='".$products[$i]['ID']."' class='formE ".remSpaces($groups[$j]['name'])."Prod' size='12' /></div>";
+							echo "<div class='categoryProductField'><input type='text' name='".remSpaces($groups[$j]['name'])."Value' value='".$products[$i]['value']."' row='".$products[$i]['ID']."' class='formE ".remSpaces($groups[$j]['name'])."Prod' size='12' /></div>";
+							echo "<div class='categoryProductField'><input type='text' name='".remSpaces($groups[$j]['name'])."Price' value='".$products[$i]['price']."' row='".$products[$i]['ID']."' class='formE ".remSpaces($groups[$j]['name'])."Prod' size='12' /></div>";
+							echo "<div class='categoryProductField'><select row='".$products[$i]['ID']."' name='".remSpaces($groups[$j]['name']).$products[$i]['ID']."Visible' class='formE ".remSpaces($groups[$j]['name'])."Prod' id='".remSpaces($groups[$j]['name']).$products[$i]['ID']."Visible'><option value='1' ".$visibleYes.">Yes</option><option value='0' ".$visibleNo.">No</option></select></div>";
+							echo "<div class='categoryProductField'><input type='text' name='".remSpaces($groups[$j]['name'])."Order' value='".$products[$i]['order']."' row='".$products[$i]['ID']."' class='formE ".remSpaces($groups[$j]['name'])."Prod' size='12' /></div>";
+						}
+						echo "<div class='clear'></div>\n";
+						//echo "<a href='#' class='saveCategory' id='".remSpaces($groups[$j]['name'])."'>Save ".$groups[$j]['name']."</a>\n";
+						echo "</div>\n";
+					}
+				?>
+			</div>
+			<div class="right">
+				<div class="cart">
+					<p class="header">Right Side</p>
+					<p><!--<a href="#">Add New Category</a>--></p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<script type="text/javascript" src="../scripts/functions.js"></script>
+	</body>
+</html>
